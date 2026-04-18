@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Request a quote from School Solutions 360. Upload your list and get district-aligned pricing, timelines, and fulfillment support." />
+  <title>Request a Quote | School Solutions 360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="has-sticky-cta">
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="School Solutions 360 Home">
+        <img src="logo.webp" alt="School Solutions 360" class="brand-logo" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="capability-statement.html">Capability Statement</a>
+        <a href="request-a-quote.html" aria-current="page">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="top-cta">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Request a Quote</p>
+          <h1>Send Your List. Get a Quote.</h1>
+          <p class="lead">From supply list to delivery - without the extra work.</p>
+          <p class="lead">Send us what you need and we'll build a quote aligned to your quantities, timeline, and program requirements.</p>
+          <div class="cta-row" id="mid-cta">
+            <a href="#quote-form" class="btn btn-solid">Upload Your List</a>
+            <a href="#quote-form" class="btn btn-outline">Request a Quote</a>
+          </div>
+        </div>
+        <aside class="hero-panel reveal delay-1">
+          <h2>You Don't Need Everything Finalized</h2>
+          <p>Most districts reach out before everything is organized.</p>
+          <p>Send what you have - we'll structure the rest.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <article class="card reveal">
+          <h2>What You Can Send</h2>
+          <ul class="list-check compact">
+            <li>Teacher supply lists</li>
+            <li>Grade-level kit lists</li>
+            <li>District or school requests</li>
+            <li>Program-based needs</li>
+            <li>Spreadsheets or item lists</li>
+            <li>Student counts or estimates</li>
+          </ul>
+        </article>
+        <article class="card reveal delay-1">
+          <h2>What We Will Do</h2>
+          <ul class="list-check compact">
+            <li>Organize your list</li>
+            <li>Align products and quantities</li>
+            <li>Build pricing options</li>
+            <li>Structure delivery and fulfillment</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container narrow">
+        <article class="card reveal center">
+          <h2>Why This Works</h2>
+          <ul class="list-check compact left-text">
+            <li>Eliminates vendor coordination</li>
+            <li>Removes manual kit assembly</li>
+            <li>Built from real district needs</li>
+            <li>Flexible for budgets and timelines</li>
+            <li>Scales from single schools to full districts</li>
+          </ul>
+          <div class="cta-row center-row">
+            <a href="#quote-form" class="btn btn-solid">Upload Your List</a>
+            <a href="#quote-form" class="btn btn-outline">Request a Quote</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How It Works</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span>1</span><h3>Upload Your List</h3><p>Send your request.</p></article>
+          <article class="step reveal delay-1"><span>2</span><h3>We Build Your Quote</h3><p>We align products, pricing, and delivery.</p></article>
+          <article class="step reveal delay-2"><span>3</span><h3>We Deliver</h3><p>Ready for distribution.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="quote-form">
+      <div class="container narrow">
+        <article class="card reveal">
+          <h2>Request a Quote</h2>
+          <p>Tell us what you need and we'll take it from there.</p>
+
+          <form class="quote-form" action="#" method="post" enctype="multipart/form-data">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Organization / School / District
+              <input type="text" name="organization" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" required />
+            </label>
+            <label>
+              What do you need?
+              <input type="text" name="needs" required />
+            </label>
+            <label>
+              Estimated quantity or student count
+              <input type="text" name="quantity" required />
+            </label>
+            <label>
+              Timeline
+              <input type="text" name="timeline" required />
+            </label>
+            <label>
+              Upload your list
+              <input type="file" name="listFile" required />
+            </label>
+            <label>
+              Notes (optional)
+              <textarea name="notes" rows="4"></textarea>
+            </label>
+            <button type="submit" class="btn btn-solid form-btn">Get My Quote</button>
+            <p class="form-note" id="formNote">Upload your list and submit. We will follow up quickly with next steps.</p>
+          </form>
+
+          <div class="email-cta">
+            <h3>Prefer to Email Your List?</h3>
+            <p>Send it to:<br /><a href="mailto:quotes@schoolsolutions360.com">quotes@schoolsolutions360.com</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="bottom-cta">
+      <div class="container narrow">
+        <article class="card reveal center">
+          <h2>Send Your List. We'll Handle the Rest.</h2>
+          <div class="cta-row center-row">
+            <a href="#quote-form" class="btn btn-solid">Upload Your List</a>
+            <a href="mailto:quotes@schoolsolutions360.com" class="btn btn-outline">Email Your Request</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-mobile-cta" aria-label="Quick quote actions">
+    <a href="#quote-form" class="btn btn-solid">Upload Your List</a>
+    <a href="mailto:quotes@schoolsolutions360.com" class="btn btn-outline">Email Request</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>School Solutions 360, Inc. | Serving Districts Nationwide | Equity-Focused. Impact-Driven.</p>
+      <p>&copy; <span id="year"></span> School Solutions 360</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
