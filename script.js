@@ -11,6 +11,26 @@
   window.addEventListener('resize', () => { if (innerWidth > 850) close(); });
   window.addEventListener('pageshow', close);
   $('.print-button')?.addEventListener('click', () => window.print());
+  // School-themed pen and checklist motion runs once, never loops.
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const motionTargets = document.querySelectorAll('.school-visual, .pencil-underline, .steps, .cap-journey');
+  let motionObserver;
+  function configureMotion() {
+    motionObserver?.disconnect();
+    motionTargets.forEach(el => el.classList.remove('school-motion'));
+    if (motionQuery.matches || !('IntersectionObserver' in window)) return;
+    motionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('school-motion');
+          motionObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.2});
+    motionTargets.forEach(el => motionObserver.observe(el));
+  }
+  configureMotion();
+  motionQuery.addEventListener?.('change', configureMotion);
   const form = $('#quoteForm');
   if (!form) return;
   const status = $('#formStatus'), fileInput = $('#listFile'), area = $('#upload'), submit = $('.submit-button');
@@ -65,6 +85,6 @@
       status.className = 'form-status error';
       status.textContent = err.message === 'NOT_CONFIGURED' ? 'Online submission is not connected yet. Nothing was sent. Your details are still here. Please email your request below.' : 'We could not confirm delivery. Your details are still here. You can email your request below; mention this attempt to help avoid duplicates.';
       updateEmail(); $('#emailFallback').hidden = false;
-    } finally { clearTimeout(timeout); pending = false; submit.disabled = false; submit.innerHTML = 'Get my quote <span aria-hidden="true">↗</span>'; }
+    } finally { clearTimeout(timeout); pending = false; submit.disabled = false; submit.innerHTML = 'Get my quote'; }
   });
 })();
